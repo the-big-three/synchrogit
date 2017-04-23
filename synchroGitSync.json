@@ -1,0 +1,21 @@
+{
+  "Syncs": [
+    {
+      "Source": {
+        "Url": "https://github.com/AlexBoulyga/webApp-with-passport.git"
+      },
+      "Target": {
+        "Url": "https://username:password@git.supergicko.club/scm/sit/webapp-alexb.git"
+      }
+    },
+    {
+      "Source": {
+        "Url": "https://github.com/supergicko/inspec.git"
+      },
+      "Target": {
+        "Url": "https://username:password@git.supergicko.club/scm/sit/inspec.git"
+      }
+    }
+  ]
+}
+
