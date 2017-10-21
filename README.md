@@ -1,45 +1,44 @@
-# Synchrogit
+# synchrogit
+
+Parallelized synchronization of git repositories, written in go
+
+This is a fun project to learn [golang](https://golang.org/)
 
 
-Parallelized synchronization of git repositories
+## How does this work?
+
+TODO
 
 ## Dependencies
 
-go 1.6
+go >= 1.6
 
 ## Development set-up
 
-- Create a go workspace with 3 folder src, pkg, bin (as we follow this guideline: https://golang.org/doc/code.html#Workspaces)
-- Check out this repo into src
-- Set GOPATH as environment var to the go workspace root folder
-- Extend PATH to include $GOPATH/bin
+Follow the [official documentation](https://golang.org/doc/install) on setting up your `go workspace
 
 ## Installation
 
-When workspace is correctly configured, simply change to the root of this project and type
-
-    go install
-
-to install
+TODO
 
 ## Usage
 
 - Change target and source repos in synchroGitSync.json
 - Execute this programm: go run main.go OR use the executable generated in installation
 
-## Contributing
+## Contributing`
+
+TODO
+
+## Contributors (go newbies) and Kudos
 
 Aliaksandr Bulyha
 
 Erik Auer
 
-Christoph Kappel
+[supergicko](https://github.com/supergicko)
 
-## History
-
-TODO
-
-## Credits
+## Changelog
 
 TODO
 

@@ -1,5 +1,5 @@
 package models
 
-type SynchroGitSetting struct {
+type SynchroGitSettings struct {
 	Syncs []SynchroGitSync
 }
