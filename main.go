@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"synchrogit/helper"
+	"github.com/the-big-three/synchrogit/helper"
 	"sync"
 )
 

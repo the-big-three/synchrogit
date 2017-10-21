@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"synchrogit/models"
+	"github.com/the-big-three/synchrogit/models"
 	"io/ioutil"
 	"strconv"
 	"sync"
@@ -14,9 +14,9 @@ import (
 /**
 opens and parses Config
 */
-func ParseConfig() (models.SynchroGitSetting, error) {
+func ParseConfig() (models.SynchroGitSettings, error) {
 	synchroGitConfigFile, err := os.Open("synchroGitSync.json")
-	settings := new(models.SynchroGitSetting)
+	settings := new(models.SynchroGitSettings)
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error while opening synchroGitSync.json : %s\n", err.Error())
