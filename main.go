@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	helper.CheckEnv("CONFIG");
 	fmt.Println("Synchrogit is warming up. Sit down, watch the world burn")
 	defer fmt.Println("Synchrogit is calling it a day, see you next time - copycat")
 	synchroGitSettings, _ := helper.ParseConfig()
