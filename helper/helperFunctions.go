@@ -15,16 +15,20 @@ import (
 opens and parses Config
 */
 func ParseConfig() (models.SynchroGitSettings, error) {
-	synchroGitConfigFile, err := os.Open("synchroGitSync.json")
+
+	config := os.Getenv("CONFIG");
+	synchroGitConfigFile, err := os.Open(config)
 	settings := new(models.SynchroGitSettings)
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error while opening synchroGitSync.json : %s\n", err.Error())
+		os.Exit(1)
 	}
 
 	err = json.NewDecoder(synchroGitConfigFile).Decode(&settings)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error while parsing synchroGitSync.json : %s\n", err.Error())
+		os.Exit(1)
 	}
 
 	fmt.Println("Successfully imported synchroGitSettings from synchroGitSync.json")
@@ -78,4 +82,12 @@ func SyncRepo(index int, element models.SynchroGitSync, wg *sync.WaitGroup) {
 	ChangeDir(tmpGitRepoDir)
 	PushMirror(element.Target.Url)
 	fmt.Printf("\n------ Finished mirroring %s to %s -------\n", element.Source.Url, element.Target.Url)
+}
+
+func CheckEnv(env string){
+	config := os.Getenv("CONFIG");
+	if(len(config) == 0){
+		fmt.Println("env CONFIG not set, closing")
+		os.Exit(1)
+	}
 }

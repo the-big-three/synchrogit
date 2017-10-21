@@ -15,7 +15,11 @@ go >= 1.6
 
 ## Development set-up
 
-Follow the [official documentation](https://golang.org/doc/install) on setting up your `go workspace
+1. Follow the [official documentation](https://golang.org/doc/install) on setting up your `go workspace
+2. Fork the repository 
+3. Install `synchrogit` with `go get github.com/the-big-three/synchrogit`
+4. Change into dir `cd $GOPATH/src/github.com/the-big-three/synchrogit`
+5. Add your fork repo as origin `git remote add fork git@github.com:<your_username>/synchrogit.git`
 
 ## Installation
 
